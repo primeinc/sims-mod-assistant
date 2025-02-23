@@ -6,7 +6,11 @@
         "removeComments": true,
         "preserveConstEnums": true,
         "sourceMap": true,
-        "outDir": "../dist"
+        "outDir": "../dist",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
     },
     "include": ["./**/*", "../common/**/*"]
 }

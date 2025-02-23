@@ -24,6 +24,12 @@ export function createTypesafeEvent<T extends any>() {
     return null as T;
 }
 
+/**
+ * Creates a typesafe event emitter based on the provided schema.
+ * 
+ * @param schema - An object representing the event schema, where keys are event names and values are the types of event data.
+ * @returns A typesafe event emitter with methods for emitting, subscribing to, and unsubscribing from events.
+ */
 export function createTypesafeEventEmitter<T extends EventSchema>(schema: T): TypesafeEventEmitter<T> {
     const result: TypesafeEventEmitter<T> = {
         ee: new EventEmitter(),

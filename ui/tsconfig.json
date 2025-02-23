@@ -5,7 +5,10 @@
         "target": "ES6",
         "esModuleInterop": true,
         "resolveJsonModule": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "strict": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
     },
     "include": ["../globals.d.ts", "./**/*", "./common/**/*"]
 }

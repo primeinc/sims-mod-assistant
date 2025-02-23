@@ -33,6 +33,12 @@ export class DbpfIndex implements IDbpfIndex {
         this.parseRecords(buffer);
     }
 
+    /**
+     * Parses the common data mask from the buffer.
+     * The common data mask is used to determine which fields are common across all records.
+     * 
+     * @param buffer - The buffer containing the common data mask.
+     */
     private parseCommonDataMask(buffer: Buffer) {
         const type = buffer.readInt32LE(0);
 
@@ -42,6 +48,12 @@ export class DbpfIndex implements IDbpfIndex {
         this.readPos += Sizes.Long;
     }
 
+    /**
+     * Parses the records from the buffer.
+     * The records contain information about the resources in the DBPF package.
+     * 
+     * @param buffer - The buffer containing the records.
+     */
     private parseRecords(buffer: Buffer) {
         const commonData: DbpfRecord = { ...DbpfRecordPrototype };
 
